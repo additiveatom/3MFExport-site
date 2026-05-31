@@ -1,0 +1,102 @@
+---
+title: Frequently Asked Questions
+description: FAQ — purchasing, what's included, slicer support, and behavior questions about the 3MF Export Plugin.
+---
+
+## Why isn't this in HueForge?
+
+HueForge is built around modelling — geometry, color stacks, layer
+assignments. Slicer support is its own moving target: every slicer has
+a different 3MF dialect, every Orca fork inherits something slightly
+different, and new ones land all the time (Elegoo Slicer, Anycubic
+Slicer Next). 3MF Export is a third-party plugin developed by
+Additive Atom; keeping it separate lets it ship updates on its own
+cadence — new slicers, new printer profiles, new fixes — without
+waiting on a HueForge release.
+
+## What's included in the purchase?
+
+- The plugin for all three platforms (Windows, macOS, Linux) — one
+  download covers your machine.
+- All updates for **two years from purchase**, including:
+  - New slicer support as it lands.
+  - New printer profiles as they're contributed.
+  - Bug fixes.
+- All ten currently supported slicers.
+
+## What operating systems are supported?
+
+Three: **Windows**, **macOS**, and **Linux**. One purchase covers all
+three — the release archive includes the build for each. The Linux
+build is validated on Ubuntu 22.04 with Qt 6.9 and should work on
+other modern glibc-based distros (Fedora, Arch, Debian, etc.); if
+yours doesn't, [let us know](/contact/).
+
+## Does it work with the ColorDrop, FlatForge, and HugeForge plugins?
+
+Yes. Whenever those plugins hand off meshes for export, the 3MF
+Export Plugin picks the right layout for your slicer — single plate
+with N volumes for FlatForge / ColorDrop / Split-by-Color, multi-plate
+for HugeForge tile mode.
+
+## Why do filament change layer numbers differ from Describe.txt?
+
+Describe.txt lists layer numbers for filament changes without a Height
+Range Modifier (HRM) applied. The 3MF Export Plugin adds an HRM
+automatically — it prints the beginning of your HueForge model at a
+larger layer height to speed up the base. Your slicer's layer numbers
+shift compared to Describe.txt as a result, but the filament changes
+still happen at the right Z heights.
+
+[More detail with worked examples →](/troubleshooting/describe-txt-layer-shift/)
+
+## Which slicers are supported?
+
+Ten:
+
+1. Bambu Studio
+2. Orca Slicer
+3. Elegoo Slicer
+4. Anycubic Slicer Next
+5. PrusaSlicer
+6. SuperSlicer
+7. Snapmaker Orca
+8. QIDI Slicer
+9. Orca Flashforge
+10. Creality Print
+
+## My printer isn't bundled. Can I still use the plugin?
+
+Yes — [import a printer profile](/getting-started/import-profile/)
+from any 3MF you've sliced in your slicer. The plugin reads the
+embedded profile, lets you select it in the dropdown, and uses it for
+all future exports until you delete it.
+
+## Will it work with my AMS / CFS / ACE / CANVAS / MMU / Tool Changer setup?
+
+If your printer is single-extruder, the plugin emits `M600` filament
+pauses at each filament change and no multiplexer. If your printer has
+an AMS / CFS / ACE / CANVAS / MMU / Tool Changer, the plugin emits filament-change
+G-code that drives the swap automatically. The slot count auto-fills from the printer
+profile; you can override the Printer Slots value in the dialog.
+
+## What's the translucent slot at extruder 1?
+
+It's a `#E6E6E64D` translucent placeholder filament the plugin
+prepends so your model has a uniform white-balanced base layer
+regardless of your bed color. Clear it if you'd rather not use it —
+it's just a slot, nothing's wired to require it.
+
+## I found a bug / something doesn't work right
+
+[Contact us](/contact/). Include the plugin version, slicer version,
+and ideally the exported 3MF so we can reproduce.
+
+## Where do you get the bundled printer profiles from?
+
+Each bundled profile started life as a real 3MF or config bundle
+exported from the target slicer, with HueForge-required overrides
+(layer height, filament colors, custom G-code) applied. If you have a profile for a printer we don't bundle yet, import it
+via the [getting started import profile](/getting-started/import-profile/)
+steps.
+

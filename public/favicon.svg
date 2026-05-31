@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="10" fill="#17181c"/>
+  <text x="24" y="32" text-anchor="middle"
+        font-family="'Inter Tight', 'Roboto Condensed', 'Arial Narrow', system-ui, -apple-system, sans-serif"
+        font-size="20" font-weight="900" font-stretch="condensed"
+        letter-spacing="-0.5">
+    <tspan fill="#f97316">3MF</tspan>
+  </text>
+</svg>
