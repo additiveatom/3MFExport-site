@@ -1,0 +1,70 @@
+/* Brand palette — mirrors the Shopify marketing pages.
+   Primary: orange #f97316. Secondary: teal #14b8a6.
+   Starlight expects an --sl-color-accent ramp; the ones below shift the
+   "blue accent" defaults to orange across both light and dark themes. */
+
+:root {
+  --sl-color-accent-low: #2a1408;
+  --sl-color-accent: #f97316;
+  --sl-color-accent-high: #fed7aa;
+
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #eceef2;
+  --sl-color-gray-2: #c0c2c7;
+  --sl-color-gray-3: #888b96;
+  --sl-color-gray-4: #545861;
+  --sl-color-gray-5: #353841;
+  --sl-color-gray-6: #24272f;
+  --sl-color-black: #17181c;
+}
+
+:root[data-theme='light'] {
+  --sl-color-accent-low: #ffedd5;
+  --sl-color-accent: #c2410c;
+  --sl-color-accent-high: #431407;
+
+  --sl-color-white: #17181c;
+  --sl-color-gray-1: #24272f;
+  --sl-color-gray-2: #353841;
+  --sl-color-gray-3: #545861;
+  --sl-color-gray-4: #888b96;
+  --sl-color-gray-5: #c0c2c7;
+  --sl-color-gray-6: #eceef2;
+  --sl-color-gray-7: #f6f6f9;
+  --sl-color-black: #ffffff;
+}
+
+/* Secondary teal accent for callout chips and inline highlights. */
+.tmf-accent2 {
+  color: #14b8a6;
+}
+
+/* Compact slicer grid used on the landing page. */
+.tmf-slicer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+@media (min-width: 50rem) {
+  .tmf-slicer-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.tmf-slicer-grid a {
+  display: block;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: var(--sl-color-white);
+  background: var(--sl-color-gray-6);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: border-color 120ms, background 120ms, transform 120ms;
+}
+.tmf-slicer-grid a:hover {
+  border-color: var(--sl-color-accent);
+  background: var(--sl-color-gray-5);
+  transform: translateY(-1px);
+}
