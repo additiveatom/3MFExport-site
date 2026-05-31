@@ -68,3 +68,101 @@
   background: var(--sl-color-gray-5);
   transform: translateY(-1px);
 }
+
+/* Contact form — scoped to .tmf-contact-form so nothing else inherits. */
+.tmf-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 1.25rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.6rem;
+  background: var(--sl-color-gray-6);
+}
+.tmf-contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--sl-color-white);
+}
+.tmf-contact-form input[type='text'],
+.tmf-contact-form input[type='email'],
+.tmf-contact-form textarea {
+  font: inherit;
+  font-weight: 400;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.4rem;
+  background: var(--sl-color-black);
+  color: var(--sl-color-white);
+  transition: border-color 120ms;
+}
+.tmf-contact-form input[type='text']:focus,
+.tmf-contact-form input[type='email']:focus,
+.tmf-contact-form textarea:focus {
+  outline: none;
+  border-color: var(--sl-color-accent);
+}
+.tmf-contact-form textarea {
+  resize: vertical;
+  min-height: 4rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+}
+.tmf-contact-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1rem 1rem 1.1rem;
+  margin: 0;
+  border: 1px dashed var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+}
+.tmf-contact-form fieldset legend {
+  padding: 0 0.5rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #14b8a6;
+}
+.tmf-contact-submit {
+  align-self: flex-start;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: 0.4rem;
+  background: var(--sl-color-accent);
+  color: #17181c;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 120ms, transform 120ms;
+}
+.tmf-contact-submit:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+.tmf-contact-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.tmf-contact-status {
+  min-height: 1.2rem;
+  font-size: 0.9rem;
+}
+.tmf-contact-status--pending { color: var(--sl-color-gray-3); }
+.tmf-contact-status--success { color: #14b8a6; font-weight: 600; }
+.tmf-contact-status--error { color: #f97316; font-weight: 600; }
+
+/* Honeypot field — visually hidden from humans, visible to bots */
+.tmf-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}

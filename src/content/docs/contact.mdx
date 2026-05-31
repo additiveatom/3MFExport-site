@@ -12,34 +12,84 @@ have received an email after purchasing
 <a href="https://shop.thehueforge.com/products/hueforge?aff=3"><strong>HueForge</strong></a>
 with a link inviting to the join the Discord.
 
-## Bug-report template
+## Send a message
 
-When something doesn't work, the following information lets us
-reproduce and fix faster:
+Use this form for bug reports, feature requests, or anything you'd
+rather not post in the public Discord. We'll reply by email.
 
-```
-**Plugin version:**
-**HueForge version:**
-**Slicer + version:**
-**Operating system + version:**
-**Printer + profile (bundled or imported):**
+<form id="tmf-contact-form" class="tmf-contact-form" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="2938c0c0-861a-43b5-bdee-4cc0f5c2dd03" />
+  <input type="hidden" name="subject" value="[3mfexport.com] Contact form submission" />
+  <input type="hidden" name="from_name" value="3MF Export support site" />
+  <input type="checkbox" name="botcheck" class="tmf-honeypot" tabIndex="-1" autoComplete="off" />
 
-**What I expected to happen:**
+  <label>
+    Your name
+    <input type="text" name="name" required autoComplete="name" />
+  </label>
 
-**What actually happened:**
+  <label>
+    Your email
+    <input type="email" name="email" required autoComplete="email" />
+  </label>
 
-**Steps to reproduce:**
-1.
-2.
-3.
+  <fieldset>
+    <legend>Environment</legend>
+    <label>
+      Plugin version
+      <input type="text" name="plugin_version" placeholder="e.g. 1.0.3" />
+    </label>
+    <label>
+      HueForge version
+      <input type="text" name="hueforge_version" placeholder="e.g. 0.9.4" />
+    </label>
+    <label>
+      Slicer + version
+      <input type="text" name="slicer" placeholder="e.g. Bambu Studio 1.10.0" />
+    </label>
+    <label>
+      Operating system + version
+      <input type="text" name="os" placeholder="e.g. Windows 11 / macOS 15.2 / Ubuntu 22.04" />
+    </label>
+    <label>
+      Printer + profile
+      <input type="text" name="printer" placeholder="e.g. Bambu Lab P1S, bundled profile" />
+    </label>
+  </fieldset>
 
-**Attached files:**
-- [ ] The exported 3MF
-- [ ] HueForge project file (.hfp), if relevant
-- [ ] Screenshot of the slicer showing the issue
-```
+  <label>
+    What you expected to happen
+    <textarea name="expected" rows="3"></textarea>
+  </label>
 
-Paste this template into your message and fill in what you can.
+  <label>
+    What actually happened
+    <textarea name="actual" rows="3"></textarea>
+  </label>
+
+  <label>
+    Steps to reproduce
+    <textarea name="steps" rows="4" placeholder="1.&#10;2.&#10;3."></textarea>
+  </label>
+
+  <label>
+    Anything else
+    <textarea name="message" rows="3" placeholder="Drop screenshots, .3mf files, or .hfp files in the Discord support channel — Web3Forms is text-only."></textarea>
+  </label>
+
+  <div class="h-captcha" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" data-theme="dark"></div>
+
+  <button type="submit" class="tmf-contact-submit">Send</button>
+
+  <div class="tmf-contact-status" role="status" aria-live="polite"></div>
+</form>
+
+<noscript>
+  <p><em>JavaScript is disabled — the form will redirect to a Web3Forms confirmation page after submit instead of confirming inline.</em></p>
+</noscript>
+
+<script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+<script src="/contact-form.js" defer></script>
 
 ## Feature requests
 
