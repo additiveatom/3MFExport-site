@@ -3,10 +3,12 @@ title: Importing a printer profile
 description: When the bundled profiles don't cover your printer, how to bring in your own from a sliced 3MF or a slicer-exported config ZIP.
 ---
 
-The plugin ships with profiles for the most common printers — Bambu
-A1/P1S/X1/H2-series, Elegoo Centauri, Anycubic Kobra family,
-Snapmaker U1, etc. If yours isn't in the list, import one in 30
-seconds.
+The plugin ships with profiles for the most common printers — the
+Bambu A/P/X/H-series, Anycubic Kobra 3 / KS1 family, Elegoo Centauri
+family, Prusa MK4S / MINI IS / XL / CORE One (incl. MMU3 and IDX),
+QIDI X-Plus 4 / X-Max 4 / Q2, Snapmaker U1, Flashforge AD5X, and
+more. See the [full list](/getting-started/overview/#supported-slicers).
+If yours isn't there, import one in 30 seconds.
 
 ## Two import sources
 
