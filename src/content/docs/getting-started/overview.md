@@ -31,20 +31,24 @@ Open it in your slicer, slice, print.
 
 ## Supported slicers
 
-Ten currently:
+Eleven currently, with bundled printer profiles for:
 
-| Slicer | Notes |
+| Slicer | Bundled printer profiles |
 |---|---|
-| Bambu Studio | Bambu Lab printers, AMS / CFS / ACE / CANVAS / MMU / Tool Changer support |
-| Orca Slicer | Bambu, Anycubic, Elegoo, Snapmaker, Multi-vendor |
-| Elegoo Slicer | Centauri / Centauri Carbon / Centauri Carbon 2 |
-| Anycubic Slicer Next | Kobra 3 family, KS1 |
-| PrusaSlicer | MK4, MK4S, MMU3, XL |
-| SuperSlicer | Voron, Multi-vendor |
-| Snapmaker Orca | U1 tool changer |
+| Bambu Studio | A1, A1 mini, A2L, P1P, P1S, P2S, X1, X1 Carbon, X2D, H2C, H2D, H2D Pro, H2S |
+| Orca Slicer | Bambu Lab A1, Anycubic Kobra S1, Elegoo Centauri Carbon, Elegoo Centauri Carbon 2, Snapmaker U1 |
+| Elegoo Slicer | Centauri, Centauri Carbon, Centauri Carbon 2 |
+| Anycubic Slicer Next | Kobra 3, Kobra 3 V2, Kobra 3 Max, Kobra S1, Kobra S1 Max, Kobra X |
+| PrusaSlicer | MK4S, MK4S MMU3, MK4 IS, MINI IS, XL 5-tool IS, CORE One, CORE One MMU3, CORE One IDX (4T / 8T) |
+| SuperSlicer | Voron V2 350 Afterburner |
+| Snapmaker Orca | Snapmaker U1 |
 | QIDI Slicer | X-Plus 4 |
+| QIDI Studio | Q2, X-Max 4, X-Plus 4 |
 | Orca Flashforge | AD5X |
-| Creality Print | CFS multi-material |
+| Creality Print | SPARKX i7 |
+
+Not in the list? [Import a printer profile](/getting-started/import-profile/)
+from any 3MF sliced in your slicer of choice.
 
 ## What's next
 

@@ -77,6 +77,12 @@ Press the slicer's **Slice** button. The print profile, filaments,
 extruder assignments, and filament changes are already wired — you should
 not need to touch them. Save the G-code, send it to your printer.
 
+> **Note:** For a standard swap-by-layer HueForge (the most common
+> export), Bambu Studio and most major slicers won't display the
+> filaments assigned within the 3MF until you slice the plate. If the
+> loaded 3MF looks like a single color, that's expected — click
+> **Slice Plate** and the colors will appear at their correct heights.
+
 ## What can go wrong
 
 - **Wrong slot count** — pause G-code where you wanted filament changes,

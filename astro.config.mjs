@@ -8,7 +8,7 @@ export default defineConfig({
     starlight({
       title: '3MF Export Plugin',
       description:
-        'Support and documentation for the HueForge 3MF Export Plugin — turning HueForge models into ready-to-print 3MFs for ten slicers.',
+        'Support and documentation for the HueForge 3MF Export Plugin — turning HueForge models into ready-to-print 3MFs for eleven slicers.',
       logo: {
         src: './src/assets/logo.svg',
         replacesTitle: false,

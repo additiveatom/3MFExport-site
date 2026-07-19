@@ -25,6 +25,20 @@ If you don't see your symptom here, check the [FAQ](/faq/) or
 4. **HueForge is older than the plugin requires** — check you have
    HueForge version **0.9.4** or newer.
 
+## "Open 3MF after export launched the wrong slicer"
+
+**Open 3MF after export** hands the file to your operating system,
+which opens it in whatever application is registered as the default
+handler for `.3mf` files — not necessarily the slicer you picked in
+the export dialog.
+
+If you use more than one slicer, either:
+
+- Uncheck **Open 3MF after export** when exporting for the non-default
+  slicer and open the file manually, or
+- Change your OS's default `.3mf` association to the slicer you use
+  most often.
+
 ## "The 3MF opens but the slicer says no printer profile is set"
 
 The slicer didn't recognize the embedded profile. Most common causes:
@@ -37,6 +51,14 @@ The slicer didn't recognize the embedded profile. Most common causes:
 - The built in profile for the printer is not installed. Install the
   system preset for the profile you're using to make the warning stop
   from happening.
+
+## "The 3MF loaded but I don't see any colors / filament changes"
+
+For a standard swap-by-layer HueForge (the most common export),
+Bambu Studio and most major slicers won't display the filaments
+assigned within the 3MF until you slice the plate. You're almost
+there — just click **Slice Plate** in the slicer after loading the
+3MF, and the colors will appear at their correct heights.
 
 ## "Colors are wrong / mapped to the wrong AMS slot"
 
