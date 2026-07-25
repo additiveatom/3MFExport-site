@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "og:build": "node scripts/build-og-image.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.30.0",

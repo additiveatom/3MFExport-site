@@ -3,12 +3,10 @@
   <rect x="60" y="60" width="1080" height="510" rx="32" fill="none" stroke="#f97316" stroke-width="6" stroke-opacity="0.3"/>
 
   <text x="600" y="290" text-anchor="middle"
-        font-family="'Inter Tight', 'Roboto Condensed', 'Arial Narrow', system-ui, -apple-system, sans-serif"
-        font-size="220" font-weight="900" font-stretch="condensed"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
+        font-size="220" font-weight="900"
         letter-spacing="-4">
     <tspan fill="#f97316">3MF</tspan><tspan fill="#14b8a6"
-      font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
-      font-stretch="normal"
       letter-spacing="6"> E</tspan>
   </text>
 
