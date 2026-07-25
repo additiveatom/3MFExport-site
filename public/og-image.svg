@@ -7,7 +7,7 @@
         font-size="220" font-weight="900"
         letter-spacing="-4">
     <tspan fill="#f97316">3MF</tspan><tspan fill="#14b8a6"
-      letter-spacing="6"> E</tspan>
+      letter-spacing="0"> Ex</tspan>
   </text>
 
   <text x="600" y="380" text-anchor="middle"
