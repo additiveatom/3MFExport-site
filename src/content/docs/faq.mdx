@@ -81,6 +81,22 @@ an AMS / CFS / ACE / CANVAS / MMU / Tool Changer, the plugin emits filament-chan
 G-code that drives the swap automatically. The slot count auto-fills from the printer
 profile; you can override the Printer Slots value in the dialog.
 
+## When does the plugin add pauses vs filament changes?
+
+The plugin compares **Total Printer Slots** (set in the Export 3MF
+dialog) to the number of unique filaments in your HueForge project:
+
+- **Slots ≥ unique filaments** — no pauses are added. Every filament
+  gets its own slot and the multiplexer swaps automatically.
+- **Slots &lt; unique filaments** — an `M600`-style pause is inserted at
+  each swap that would exceed the slot count, so you can change the
+  filament by hand mid-print.
+
+So if you don't want any pauses, bump **Total Printer Slots** up to
+match (or exceed) the unique filament count in your project. If you're
+intentionally hand-swapping on a low-slot printer, leave the value at
+the actual slot count and the pauses will land where they need to.
+
 ## What's the translucent slot at extruder 1?
 
 It's a `#E6E6E64D` translucent placeholder filament the plugin
