@@ -16,12 +16,15 @@ export default defineConfig({
       customCss: ['./src/styles/custom.css'],
       lastUpdated: true,
       head: [
-        { tag: 'meta', attrs: { property: 'og:image', content: 'https://support.3mfexport.com/og-image.svg' } },
+        { tag: 'meta', attrs: { property: 'og:image', content: 'https://support.3mfexport.com/og-image.png' } },
+        { tag: 'meta', attrs: { property: 'og:image:type', content: 'image/png' } },
         { tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
         { tag: 'meta', attrs: { property: 'og:image:height', content: '630' } },
+        { tag: 'meta', attrs: { property: 'og:image:alt', content: '3MF Export Plugin — eleven slicers, three platforms, one purchase.' } },
         { tag: 'meta', attrs: { property: 'og:type', content: 'website' } },
         { tag: 'meta', attrs: { name: 'twitter:card', content: 'summary_large_image' } },
-        { tag: 'meta', attrs: { name: 'twitter:image', content: 'https://support.3mfexport.com/og-image.svg' } },
+        { tag: 'meta', attrs: { name: 'twitter:image', content: 'https://support.3mfexport.com/og-image.png' } },
+        { tag: 'meta', attrs: { name: 'theme-color', content: '#f97316' } },
       ],
       sidebar: [
         {
