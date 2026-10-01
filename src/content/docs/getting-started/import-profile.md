@@ -80,6 +80,9 @@ profile with someone else by sending them the JSON / INI inside.
   have.
 - **"Nothing Imported"** — every profile in the file was skipped,
   usually because you answered **No** to the overwrite question.
-- **"Filament colors look off"** — colors come from your HueForge
-  project, not the imported profile. The imported profile's filament
-  *types* (PLA, PETG temperatures) are what's used.
+- **"Filament colors or types don't match my profile"** — the
+  filaments come from your HueForge project, not the imported profile.
+  Each slot gets your HueForge filament's color and type, the slicer
+  filament preset that matches that type, and its temperatures. The
+  imported profile supplies the printer and print settings. See
+  [Profile values look wrong](/troubleshooting/profile-fidelity/).

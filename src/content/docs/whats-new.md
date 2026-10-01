@@ -103,12 +103,21 @@ changes?](/faq/#when-does-the-plugin-add-pauses-vs-filament-changes)
 
 ### Purge volumes worked out from your colors
 
-For Bambu Studio and the Orca-based slicers, the purge (flush) volume
-between each pair of filaments is now worked out from the actual
-colors — more purge when going to a lighter or more saturated color —
-much like the slicer's own *re-calculate* button. Before, projects
-with more filaments than the profile's purge table could end up with
-pairs set to zero.
+For Bambu Studio and its forks, the purge (flush) volume between each
+pair of filaments is now calculated from the actual colors — more
+purge when going to a lighter or more saturated color — the way Bambu
+Studio's *Re-calculate purging volumes* does. Before, projects with
+more filaments than the profile's purge table could end up with pairs
+set to zero. Your profile's purge multiplier and extra load / unload
+purge are still used, and PrusaSlicer-family slicers keep all of your
+profile's purge settings.
+
+### FlatForge and ColorDrop parts matched by filament ID
+
+With HueForge 0.9.4.4 or later, each FlatForge and ColorDrop part is
+matched to its filament by ID, which is more reliable than matching
+filament names. With older HueForge versions the plugin still matches
+by name.
 
 ### Clear errors when the 3MF can't be saved
 

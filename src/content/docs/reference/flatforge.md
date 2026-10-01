@@ -20,7 +20,9 @@ mesh with extruder-tagged layer bands).
 ## What you see in the slicer
 
 - **One plate, one object**, with N volumes inside it. Each volume is
-  tagged with the extruder it should print from.
+  tagged with the extruder it should print from. With HueForge 0.9.4.4
+  or later, each FlatForge and ColorDrop part is matched to its
+  filament by ID; with older versions, by filament name.
 - The filament list shows your N HueForge colors.
 - **No layer-by-layer filament-change G-code.** Filament changes happen
   at the natural Z transitions between volumes; the slicer figures them
