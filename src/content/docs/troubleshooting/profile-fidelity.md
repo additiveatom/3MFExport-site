@@ -31,15 +31,19 @@ output to make sense:
 | `layer_height` | Detail layer height set by HueForge model |
 | `initial_layer_print_height` | Base layer height (HRM lower bound) |
 | `filament_colour` | Comes from HueForge swatches (Bambu/Orca schema spelling) |
-| `filament_ids` / `filament_settings_id` | Wired to the resolved filaments |
+| `filament_type` / `filament_settings_id` | Each slot gets the slicer filament preset that matches its HueForge filament type (PLA, PETG, …) |
+| Per-filament temperatures | Bambu Studio and its forks: from HueForge's filament data. PrusaSlicer-family slicers: from the matching slicer filament preset |
 | `custom_gcode_per_layer` | Filament-change / pause G-code per color transition |
 | `layer_config_ranges` | The Height Range Modifier — see [the layer-shift page](/troubleshooting/describe-txt-layer-shift/) |
 | `different_settings_to_system` | Slicer's "what's been customized" list |
-| `flush_volumes_matrix` | Bambu Studio and Orca-based slicers: the purge volume for each pair of filaments, worked out from your HueForge colors (more purge going to a lighter or more saturated color) |
+| `flush_volumes_matrix` | Bambu Studio and its forks: the purge volume for each pair of filaments, calculated from your HueForge colors the way Bambu Studio's *Re-calculate purging volumes* does |
 | Plate / bed positioning | Mesh placement on the bed — centered, including on beds whose origin is at the center |
 
-Everything else (wall count, infill, speeds, retract, brim, etc.) is
-preserved from your imported profile.
+Everything else (wall count, infill, speeds, retract, brim, custom
+G-code, etc.) is preserved from your printer profile. That includes the
+purge multiplier and the extra load / unload purge in Bambu Studio and
+its forks, and every purge setting in PrusaSlicer, SuperSlicer and QIDI
+Slicer profiles.
 
 ## What the slicer commonly overrides on load
 
