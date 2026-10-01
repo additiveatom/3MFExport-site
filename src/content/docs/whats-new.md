@@ -1,6 +1,6 @@
 ---
 title: What's new in 1.1.0
-description: Everything new in version 1.1.0 of the 3MF Export Plugin — opening the 3MF in the slicer you picked, choosing the Filament Order, centering on offset beds — plus the 1.0.8 and 1.0.9 updates before it.
+description: Everything new in version 1.1.0 of the 3MF Export Plugin — opening the 3MF in the slicer you picked, choosing the Filament Order, centering on offset beds — plus the 1.0.7 to 1.0.9 updates before it.
 ---
 
 Version **1.1.0** is the current release. To update, drag the new
@@ -50,23 +50,16 @@ profiles with an off-zero bed origin are handled the same way.
   rotation on or off re-checks the fit right away, so a project that
   only fits sideways no longer shows a stale *larger than the printer
   bed* warning.
-- **HugeForge tile exports open the slicer once,** after the last tile
-  is written, instead of opening one slicer window per tile.
 - **Project names are made safe for file names.** Characters Windows
   doesn't allow in file names (`< > : " / \ | ? *`) become `_`, and
   stray leading or trailing spaces are removed. See
   [Your first export](/getting-started/first-export/#5-set-the-output-options).
-- **Flashforge Studio 1.7 is found automatically on Windows,** and
-  error messages name slicers the way the dropdown does
-  (*Flashforge Studio*, not *OrcaFlashforge*).
-- **Save Project As no longer hangs** after you locate your slicer for
-  **Open 3MF after export**.
 - **The Export 3MF dialog opens faster** — the bundled printer
   profiles are read once per HueForge session instead of every time.
 
-## Earlier updates: 1.0.8 and 1.0.9
+## Earlier updates: 1.0.7 to 1.0.9
 
-These shipped after 1.0.7 and are all included in 1.1.0.
+These shipped after 1.0.6 and are all included in 1.1.0.
 
 ### Rotate HueForge 90 Degrees
 
@@ -153,10 +146,7 @@ taken for Orca Slicer.
 
 Every bundled profile now uses the same infill and top/bottom surface
 patterns and a 0.24 mm first layer, so a model prints the same way
-whichever printer you export for. PrusaSlicer
-exports also stopped borrowing filament settings from unrelated
-filament presets, so PrusaSlicer flags fewer filament settings as
-modified when it opens the file.
+whichever printer you export for.
 
 ### Save Project As panel
 
