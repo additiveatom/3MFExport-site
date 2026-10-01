@@ -27,17 +27,33 @@ If you don't see your symptom here, check the [FAQ](/faq/) or
 
 ## "Open 3MF after export launched the wrong slicer"
 
-**Open 3MF after export** hands the file to your operating system,
-which opens it in whatever application is registered as the default
-handler for `.3mf` files — not necessarily the slicer you picked in
-the export dialog.
+Update to **1.1.0**. Older versions handed the file to your operating
+system's default `.3mf` app; 1.1.0 opens the slicer you picked in the
+**Slicer** dropdown.
 
-If you use more than one slicer, either:
+If 1.1.0 opens the wrong *install* of the right slicer — a release
+build when you wanted a beta, say — click the **…** button next to
+**Slicer** and use **Browse…** to pick the one you want. See [Opening
+the 3MF in your slicer](/reference/open-in-slicer/#changing-or-resetting-the-saved-location).
 
-- Uncheck **Open 3MF after export** when exporting for the non-default
-  slicer and open the file manually, or
-- Change your OS's default `.3mf` association to the slicer you use
-  most often.
+## "Open 3MF after export asks me to locate my slicer" / "Could not open in slicer"
+
+The plugin looks for each slicer in its standard install location.
+If yours is installed somewhere else — or you're on Linux and the
+slicer isn't a Flatpak install of Bambu Studio, Orca Slicer or
+PrusaSlicer — it asks you to pick the slicer's program once and
+remembers it.
+
+If you canceled that picker, you'll see **Could not open in slicer**.
+The 3MF was still exported. Click **…** next to **Slicer**, then
+**Browse…**, to set the location. [Where the plugin looks
+→](/reference/open-in-slicer/#standard-install-locations)
+
+## "HugeForge opened a slicer window for every tile"
+
+Fixed in **1.1.0** — the slicer now opens once, after the last tile
+is written. Expect a short wait (about 20 seconds after the last
+tile) while the plugin makes sure no more tiles are coming.
 
 ## "The 3MF opens but the slicer says no printer profile is set"
 
@@ -62,10 +78,14 @@ there — just click **Slice Plate** in the slicer after loading the
 
 ## "Colors are wrong / mapped to the wrong AMS slot"
 
-The plugin maps your HueForge color at index N to slicer filament
-slot N+1 (slot 1 is reserved for the translucent base). If your AMS is
-physically loaded in a different order, either:
+By default the plugin puts your filaments in slots in HueForge's
+order — the first filament in slot 1, the second in slot 2, and so
+on. (FlatForge face-down prints are the exception: the translucent
+cap filament takes slot 1.) If your AMS is physically loaded in a
+different order:
 
+- Click **Edit…** next to **Filament Order** and arrange the spools to
+  match your printer — see [Filament Order](/reference/filament-order/),
 - Rearrange the physical AMS spools to match HueForge's order, or
 - In the slicer, reassign filament slots before slicing (the slicer
   remaps the filament changes automatically).
@@ -82,10 +102,42 @@ The plugin uses the printer profile's **printable_area** field, which
 is the *usable* bed (often smaller than the physical bed by the brim
 margin). If the warning is wrong:
 
+- If the model only fits sideways, tick **Rotate HueForge 90
+  Degrees** — the warning re-checks the rotated footprint right away.
+  (Before 1.1.0 the warning ignored the rotation.)
 - Check the imported profile's `printable_area` matches your slicer's
   bed shape.
 - Re-import the profile from a 3MF where the bed is configured
   correctly.
+
+## "The model lands in the corner of the bed"
+
+On printers whose bed origin is at the center of the bed — the
+**Flashforge Adventurer 5M, 5M Pro and A5** among them — versions
+before 1.1.0 placed the model in the back-right corner. Update to
+**1.1.0**, which centers it. If it still happens with 1.1.0, [send us
+the 3MF](/contact/).
+
+## "My printer isn't in the Printer Profile list"
+
+- Check **Nozzle Diameter** — the list only shows profiles for the
+  selected nozzle size.
+- Check **Slicer** — each slicer has its own profiles.
+- Still missing? [Import a printer
+  profile](/getting-started/import-profile/) from a 3MF sliced for
+  that printer.
+
+## "Cannot Write to Output Folder" / "Cannot Overwrite File"
+
+The plugin checks it can save the 3MF before it starts:
+
+- **Cannot Create Output Folder** / **Cannot Write to Output Folder**
+  — the folder is read-only or protected (for example a system
+  folder). The message includes the reason your operating system
+  gave. Pick a different **Output Folder**.
+- **Cannot Overwrite File** — a 3MF with the same name is open in
+  your slicer, which locks it. Close the project in the slicer, or
+  change **Project Name**.
 
 ## "Some print setting from my profile isn't being honored"
 

@@ -35,7 +35,8 @@ output to make sense:
 | `custom_gcode_per_layer` | Filament-change / pause G-code per color transition |
 | `layer_config_ranges` | The Height Range Modifier — see [the layer-shift page](/troubleshooting/describe-txt-layer-shift/) |
 | `different_settings_to_system` | Slicer's "what's been customized" list |
-| Plate / bed positioning | Mesh placement on the bed |
+| `flush_volumes_matrix` | Bambu Studio and Orca-based slicers: the purge volume for each pair of filaments, worked out from your HueForge colors (more purge going to a lighter or more saturated color) |
+| Plate / bed positioning | Mesh placement on the bed — centered, including on beds whose origin is at the center |
 
 Everything else (wall count, infill, speeds, retract, brim, etc.) is
 preserved from your imported profile.

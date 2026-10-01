@@ -2,6 +2,10 @@
 title: 3MF Export Plugin
 description: Support and documentation for the HueForge 3MF Export Plugin — turning HueForge models into ready-to-print 3MFs for eleven slicers.
 template: splash
+banner:
+  content: |
+    Version 1.1.0 is out — opens the 3MF in the slicer you picked and lets you choose the filament order.
+    <a href="/whats-new/">See what's new</a>
 hero:
   tagline: Slice HueForge models in the slicer you already use. Eleven slicers, three platforms, one purchase.
   actions:
@@ -19,6 +23,9 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 ## Common entry points
 
 <CardGrid>
+  <Card title="What's new in 1.1.0" icon="star">
+    [Open in your slicer, Filament Order, and more](/whats-new/) — everything in the latest release.
+  </Card>
   <Card title="Install the plugin" icon="rocket">
     [Drag the release archive onto HueForge](/getting-started/install/) — one step.
   </Card>
@@ -30,6 +37,9 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
   </Card>
   <Card title="FAQ" icon="information">
     [Answers to the questions that come up](/faq/) before, during, and after purchase.
+  </Card>
+  <Card title="Supported slicers & printers" icon="list-format">
+    [Eleven slicers and every bundled printer profile](/getting-started/overview/#supported-slicers).
   </Card>
 </CardGrid>
 

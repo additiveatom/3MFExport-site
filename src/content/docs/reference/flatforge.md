@@ -31,8 +31,8 @@ mesh with extruder-tagged layer bands).
 FlatForge has a checkbox for "Face-down print (cap layer)". When on,
 the plugin:
 
-1. Prepends a slot-1 filament with hex `#E6E6E64D` (translucent grey,
-   25% alpha).
+1. Prepends a slot-1 filament with hex `#E6E6E64D` (translucent gray,
+   about 30% opacity).
 2. Adds a flat cap layer that prints first from that translucent
    slot.
 3. Your N color parts then print on top.
@@ -43,4 +43,12 @@ HueForge-like depth effect even on a non-stacked print.
 
 When the checkbox is off, no placeholder is inserted; you see only
 your N real color slots.
+
+## Choosing the slot order
+
+**Filament Order** works for FlatForge, ColorDrop and Split-by-Color
+exports too: click **Edit…** next to it in the plugin's **3MF
+Export** options and arrange the spools to match your printer. Each color part is assigned to its new slot. With the
+translucent cap on, the cap keeps slot 1 and your colors follow from
+slot 2. See [Filament Order](/reference/filament-order/).
 
