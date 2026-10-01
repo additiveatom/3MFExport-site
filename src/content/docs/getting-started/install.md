@@ -22,7 +22,7 @@ That's it. The plugin is wired in.
 
 After restart:
 
-- The Plugins menu has an **Export 3MF** menu item now.
+- The menu bar has a **3MF Export** menu with an **Export 3MF** item.
 - HueForge's **File → Save Project As** dialog gains a **3MF Export**
   tab near the top.
 
@@ -30,16 +30,29 @@ If both are present, you're done — head to [Your first
 export](/getting-started/first-export/).
 
 If they aren't, see [Common issues → "Plugin doesn't appear in the
-menu"](/troubleshooting/common/).
+menu"](/troubleshooting/common/#plugin-doesnt-appear-in-the-menu-after-i-installed-it).
+
+## Optional: open Save Project As on the 3MF tab
+
+The first time you open the **3MF Export** tab in **Save Project As**,
+a one-time tip shows how to make 3MF HueForge's default output format,
+so the dialog opens on that tab every time:
+
+1. Open **File → Settings** (on macOS, **HueForge → Preferences…**).
+2. Select the **Export** tab.
+3. Set **Default Output Format** to **3MF** and click **Save and
+   Apply**.
 
 ## Updating
 
 Same flow: drag the new release archive onto HueForge. It replaces
-the previous version.
+the previous version. See [what's new in 1.1.0](/whats-new/).
 
 Quit HueForge first on Windows (it holds the old plugin file open
 while running). On macOS and Linux the in-flight install handles the
 swap.
 
 Your imported printer profiles live in HueForge's app data folder
-under `PrinterConfigs/` and survive plugin updates.
+under `PrinterConfigs/` and survive plugin updates, as do your
+other plugin settings, such as slicer locations you picked for **Open
+3MF after export**.

@@ -38,6 +38,11 @@ Modifier) into the 3MF that says:
 > From Z=0 up to the top of the base, print at **firstLayerHeight**
 > (e.g. 0.20 mm). Above that, print at **layerHeight** (e.g. 0.08 mm).
 
+The base layer height is fine-tuned so the base divides into whole
+layers at a height your slicer accepts — for example 0.20 mm on a
+Bambu printer rather than 0.1333 mm, which Bambu Studio would reject
+or round.
+
 The slicer obeys: the base uses fewer, thicker layers; the color
 stack above uses the thin detail layers. Total print time drops
 significantly, surface quality on the visible top is unchanged.

@@ -37,6 +37,10 @@ export default defineConfig({
           ],
         },
         {
+          label: "What's new in 1.1.0",
+          slug: 'whats-new',
+        },
+        {
           label: 'FAQ',
           slug: 'faq',
         },
@@ -51,6 +55,8 @@ export default defineConfig({
         {
           label: 'Reference',
           items: [
+            { label: 'Opening the 3MF in your slicer', slug: 'reference/open-in-slicer' },
+            { label: 'Filament Order', slug: 'reference/filament-order' },
             { label: 'HugeForge tile mode', slug: 'reference/tile-mode' },
             { label: 'FlatForge / ColorDrop / Split-by-Color', slug: 'reference/flatforge' },
           ],
