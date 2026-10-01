@@ -49,12 +49,6 @@ The 3MF was still exported. Click **…** next to **Slicer**, then
 **Browse…**, to set the location. [Where the plugin looks
 →](/reference/open-in-slicer/#standard-install-locations)
 
-## "HugeForge opened a slicer window for every tile"
-
-Fixed in **1.1.0** — the slicer now opens once, after the last tile
-is written. Expect a short wait (about 20 seconds after the last
-tile) while the plugin makes sure no more tiles are coming.
-
 ## "The 3MF opens but the slicer says no printer profile is set"
 
 The slicer didn't recognize the embedded profile. Most common causes:

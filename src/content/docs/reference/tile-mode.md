@@ -47,8 +47,7 @@ With **Open 3MF after export** on and **Save Multiple 3MF Files**
 unchecked, HugeForge hands the plugin one tile at a time. The plugin
 waits until the last tile has been written — about 20 seconds after
 it arrives — and then opens your slicer **once** with the finished
-multi-plate 3MF. (Before 1.1.0 it could open a slicer window per
-tile.) See [Opening the 3MF in your
+multi-plate 3MF. See [Opening the 3MF in your
 slicer](/reference/open-in-slicer/#hugeforge-tile-exports).
 
 Every tile is centered on its plate, including on printers whose bed
